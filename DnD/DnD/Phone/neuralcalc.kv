@@ -1,0 +1,100 @@
+<MyRoot>
+
+    calc_field: calc_field
+
+    orientation: 'vertical'
+    TextInput:
+        id: calc_field
+        height: 200
+        size_hind: (1,None)
+        readonly: True
+        disabled: True
+        font_size: 124
+
+    GridLayout:
+        rows: 6
+        columns: 3
+        padding: 10
+        spacing: 10
+        height: 400
+        size_hind: (1,None)
+
+        Button:
+            text: "C"
+            font_size: 26
+            on_press: root.clear()
+        Button:
+            text: "Backspace"
+            font_size: 26
+            on_press: root.back_space()
+        Button:
+            text: "="
+            font_size: 26
+            on_press: root.get_result()
+
+
+
+        Button:
+            text: "1"
+            font_size: 26
+            on_press: root.calc_symbol('1')
+        Button:
+            text: "2"
+            font_size: 26
+            on_press: root.calc_symbol('2')
+        Button:
+            text: "3"
+            font_size: 26
+            on_press: root.calc_symbol('3')
+
+        Button:
+            text: "4"
+            font_size: 26
+            on_press: root.calc_symbol('4')
+        Button:
+            text: "5"
+            font_size: 26
+            on_press: root.calc_symbol('5')
+        Button:
+            text: "6"
+            font_size: 26
+            on_press: root.calc_symbol('6')
+
+        Button:
+            text: "7"
+            font_size: 26
+            on_press: root.calc_symbol('7')
+        Button:
+            text: "8"
+            font_size: 26
+            on_press: root.calc_symbol('8')
+        Button:
+            text: "9"
+            font_size: 26
+            on_press: root.calc_symbol('9')
+
+        Button:
+            text: "0"
+            font_size: 26
+            on_press: root.calc_symbol('0')
+        Button:
+            text: "AC™"
+            font_size: 26
+            on_press: root.calc_symbol(' AC= ')
+        Button:
+            text: "Mage Shield"
+            font_size: 26
+            on_press: root.calc_symbol(' M_shield ')
+
+        Button:
+            text: "Light armor"
+            font_size: 26
+            on_press: root.calc_symbol(' Light ')
+        Button:
+            text: "Medium armor"
+            font_size: 26
+            on_press: root.calc_symbol(' Medium ')
+        Button:
+            text: "Heavy armor"
+            font_size: 26
+            on_press: root.calc_symbol(' Heavy ')
