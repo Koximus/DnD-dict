@@ -10,21 +10,23 @@ root.configure(bg="#17161b")
 def dmg_calc(strin):
     dmg_list = [int(i) for i in strin.split() if i.isdigit()]       # ez a buzi egy listát csinál...
     dmg_int = dmg_list[0]
-
     if strin.count("armor") > 1:
         clear()
 
-        return "ERROR"
+        return "ERROR "
+
+
+
 
     if "Light armor" in strin:
         dmg_reduction = dmg_int * 0.1
         for i in range(1, dmg_int):
-            dmg_int -= 1
-            if i >= dmg_reduction or i == 5:
-                break
-            if dmg_int == 0:
-                break
-        text = ("= " + str(dmg_int))
+                dmg_int -= 1
+                if i >= dmg_reduction or i == 5:
+                    break
+                if dmg_int == 0:
+                    break
+                text = ("= " + str(dmg_int))
         return text
 
     if "Medium armor" in strin:
@@ -36,7 +38,7 @@ def dmg_calc(strin):
             if dmg_int == 0:
                 break
 
-        text = ("= " + str(dmg_int))
+            text = ("= " + str(dmg_int))
         return text
 
     if "Heavy armor" in strin:
